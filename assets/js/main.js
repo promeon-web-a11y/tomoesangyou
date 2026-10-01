@@ -70,8 +70,11 @@
     return first;
   }
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  // 送信ボタンを持たない（type="button"）ため、JSが無効でもフォームは送信されない。
+  // 念のため submit イベントも止める。
+  form.addEventListener('submit', function (e) { e.preventDefault(); });
+
+  function toConfirm() {
     var invalid = validate();
     if (invalid) { invalid.focus(); return; }
     var list = document.getElementById('confirm-list');
@@ -87,12 +90,13 @@
       list.appendChild(row);
     });
     show('confirm');
-  });
+  }
 
   form.addEventListener('click', function (e) {
     var btn = e.target.closest('[data-action]');
     if (!btn) return;
     var action = btn.getAttribute('data-action');
+    if (action === 'confirm') toConfirm();
     if (action === 'back') show('input');
     if (action === 'finish') {
       form.reset();

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" role="img" aria-labelledby="t">
+  <title id="t">屋外・屋内の給排水配管のイメージイラスト（建物の断面）</title>
+  <defs>
+    <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a8825a"/>
+      <stop offset="1" stop-color="#6b4f34"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 空 -->
+  <rect width="900" height="600" fill="#eef3f8"/>
+  <!-- 地中 -->
+  <rect y="420" width="900" height="180" fill="url(#soil)"/>
+  <rect y="410" width="900" height="14" fill="#8b929b"/>
+
+  <!-- 建物の断面（特定できない簡略形） -->
+  <path d="M60 170 L290 60 L520 170 Z" fill="#4d6b8a"/>
+  <rect x="80" y="170" width="420" height="240" fill="#ffffff" stroke="#9aa7b8" stroke-width="4"/>
+  <line x1="290" y1="170" x2="290" y2="410" stroke="#d6dbe3" stroke-width="6"/>
+  <rect x="80" y="404" width="420" height="10" fill="#9aa7b8"/>
+
+  <!-- 屋内：流し台 -->
+  <g>
+    <rect x="110" y="300" width="150" height="104" fill="#e4e9f0" stroke="#9aa7b8" stroke-width="3"/>
+    <rect x="104" y="292" width="162" height="12" fill="#c9d1da"/>
+    <path d="M150 292 v-34 h30" fill="none" stroke="#6d7680" stroke-width="6" stroke-linecap="round"/>
+    <rect x="140" y="284" width="60" height="10" rx="3" fill="#9aa7b8"/>
+  </g>
+  <!-- 屋内：トイレ -->
+  <g>
+    <rect x="390" y="300" width="40" height="70" rx="6" fill="#e4e9f0" stroke="#9aa7b8" stroke-width="3"/>
+    <path d="M340 360 h70 v24 a20 20 0 0 1 -20 20 h-30 a20 20 0 0 1 -20 -20 z" fill="#e4e9f0" stroke="#9aa7b8" stroke-width="3"/>
+  </g>
+
+  <!-- 給水管（青）：屋外のメーター→床下→各器具 -->
+  <g fill="none" stroke="#2c6aa0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M840 470 H560 V430 H200 V300"/>
+    <path d="M410 430 V370"/>
+  </g>
+  <!-- 排水管（グレー）：各器具→床下→屋外の桝→道路側 -->
+  <g fill="none" stroke="#6d7680" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M230 404 V500 H600"/>
+    <path d="M380 404 V500"/>
+    <path d="M640 500 H900"/>
+  </g>
+  <!-- 屋外の排水桝 -->
+  <rect x="596" y="452" width="44" height="72" fill="#8e959e" stroke="#5b6168" stroke-width="3"/>
+  <rect x="588" y="410" width="60" height="10" fill="#3a3f46"/>
+  <rect x="604" y="420" width="28" height="32" fill="#8e959e"/>
+  <!-- 水道メーターボックス -->
+  <rect x="790" y="396" width="56" height="18" rx="3" fill="#2f4a66"/>
+  <rect x="806" y="440" width="24" height="44" fill="#2f4a66" opacity=".55"/>
+
+  <!-- 流れの向き -->
+  <g fill="#2c6aa0">
+    <path d="M700 459 l-16 11 l16 11 z"/>
+  </g>
+  <g fill="#ffffff">
+    <path d="M470 494 l16 6 l-16 6 z"/>
+    <path d="M760 494 l16 6 l-16 6 z"/>
+  </g>
+
+  <!-- 作業者（屋外、地上で配管を接続。保護具着用） -->
+  <g>
+    <!-- しゃがんだ姿勢 -->
+    <rect x="686" y="350" width="34" height="40" rx="8" fill="#f2c230"/>
+    <rect x="686" y="366" width="34" height="5" fill="#e9edf1"/>
+    <path d="M690 388 h30 l6 18 h-14 l-4 -8 h-8 l-2 8 h-12 z" fill="#2b3a52"/>
+    <rect x="684" y="402" width="16" height="8" rx="3" fill="#24272c"/>
+    <rect x="712" y="402" width="16" height="8" rx="3" fill="#24272c"/>
+    <circle cx="703" cy="338" r="12" fill="#e0b48f"/>
+    <path d="M688 336 a15 13 0 0 1 30 0 Z" fill="#ffffff" stroke="#c9d1da" stroke-width="2"/>
+    <rect x="686" y="334" width="34" height="4" rx="2" fill="#ffffff" stroke="#c9d1da" stroke-width="1"/>
+    <!-- 腕と工具 -->
+    <path d="M688 372 l-24 18" stroke="#f2c230" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="662" cy="392" r="6" fill="#3a3f46"/>
+    <rect x="648" y="388" width="26" height="6" rx="3" fill="#8e959e" transform="rotate(-20 661 391)"/>
+  </g>
+  <!-- 屋外の立ち上がり配管（接続作業の対象） -->
+  <path d="M650 410 V440" stroke="#2c6aa0" stroke-width="9" stroke-linecap="round"/>
+</svg>

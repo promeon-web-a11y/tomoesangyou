@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" role="img" aria-labelledby="t">
+  <title id="t">下水管の新設・敷設替えのイメージイラスト（地中の断面）</title>
+  <defs>
+    <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a8825a"/>
+      <stop offset="1" stop-color="#6b4f34"/>
+    </linearGradient>
+    <linearGradient id="pipeNew" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb0dc"/>
+      <stop offset=".45" stop-color="#2c6aa0"/>
+      <stop offset="1" stop-color="#1b4a75"/>
+    </linearGradient>
+    <linearGradient id="pipeOld" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9b3a8"/>
+      <stop offset="1" stop-color="#7f796f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 空 -->
+  <rect width="900" height="600" fill="#eef3f8"/>
+  <!-- 地中 -->
+  <rect y="150" width="900" height="450" fill="url(#soil)"/>
+  <g fill="#8a6a48" opacity=".55">
+    <ellipse cx="80" cy="260" rx="22" ry="8"/><ellipse cx="160" cy="420" rx="16" ry="6"/>
+    <ellipse cx="820" cy="300" rx="20" ry="7"/><ellipse cx="760" cy="470" rx="14" ry="6"/>
+    <ellipse cx="110" cy="540" rx="18" ry="7"/>
+  </g>
+  <!-- 舗装 -->
+  <rect y="132" width="900" height="22" fill="#59606a"/>
+  <rect y="150" width="900" height="10" fill="#9a958c"/>
+
+  <!-- 既存の管（入れ替え前：右側） -->
+  <g>
+    <rect x="640" y="430" width="260" height="56" rx="6" fill="url(#pipeOld)"/>
+    <path d="M700 436 l14 18 l-10 10 l16 18" fill="none" stroke="#5e584f" stroke-width="3"/>
+    <path d="M800 434 l-8 16 l12 12" fill="none" stroke="#5e584f" stroke-width="3"/>
+    <ellipse cx="640" cy="458" rx="10" ry="28" fill="#6f695f"/>
+  </g>
+
+  <!-- 掘削部（土留めあり） -->
+  <rect x="190" y="160" width="420" height="380" fill="#5a4129" opacity=".35"/>
+  <g fill="#4d6b8a">
+    <rect x="190" y="150" width="20" height="390"/>
+    <rect x="590" y="150" width="20" height="390"/>
+  </g>
+  <g fill="#3d5874">
+    <rect x="210" y="150" width="4" height="390"/>
+    <rect x="586" y="150" width="4" height="390"/>
+  </g>
+  <g stroke="#2f4a66" stroke-width="10" stroke-linecap="round">
+    <line x1="214" y1="230" x2="586" y2="230"/>
+    <line x1="214" y1="330" x2="586" y2="330"/>
+  </g>
+  <g fill="#2f4a66">
+    <rect x="210" y="222" width="14" height="16"/><rect x="576" y="222" width="14" height="16"/>
+    <rect x="210" y="322" width="14" height="16"/><rect x="576" y="322" width="14" height="16"/>
+  </g>
+
+  <!-- 砕石の基礎 -->
+  <rect x="214" y="488" width="372" height="52" fill="#aaa49a"/>
+  <g fill="#8d877d">
+    <circle cx="236" cy="510" r="5"/><circle cx="270" cy="526" r="4"/><circle cx="312" cy="506" r="5"/>
+    <circle cx="352" cy="528" r="4"/><circle cx="398" cy="510" r="5"/><circle cx="446" cy="526" r="4"/>
+    <circle cx="492" cy="508" r="5"/><circle cx="530" cy="526" r="4"/><circle cx="566" cy="510" r="5"/>
+  </g>
+
+  <!-- 新しい下水管（掘削部内〜左側の既設部） -->
+  <rect x="0" y="430" width="600" height="58" rx="6" fill="url(#pipeNew)"/>
+  <rect x="0" y="438" width="600" height="8" rx="4" fill="#a9cbea" opacity=".7"/>
+  <g fill="#1b4a75">
+    <rect x="182" y="424" width="22" height="70" rx="4"/>
+    <rect x="392" y="424" width="22" height="70" rx="4"/>
+  </g>
+  <ellipse cx="600" cy="459" rx="10" ry="29" fill="#173f63"/>
+  <!-- 流れの向き -->
+  <g fill="#ffffff" opacity=".9">
+    <path d="M300 452 h40 v-8 l18 15 l-18 15 v-8 h-40 z"/>
+    <path d="M480 452 h40 v-8 l18 15 l-18 15 v-8 h-40 z"/>
+  </g>
+
+  <!-- マンホール（左側） -->
+  <g>
+    <rect x="40" y="150" width="90" height="300" fill="#8e959e"/>
+    <rect x="52" y="160" width="66" height="290" fill="#6f7680"/>
+    <g stroke="#c9ced5" stroke-width="4">
+      <line x1="62" y1="190" x2="108" y2="190"/><line x1="62" y1="230" x2="108" y2="230"/>
+      <line x1="62" y1="270" x2="108" y2="270"/><line x1="62" y1="310" x2="108" y2="310"/>
+      <line x1="62" y1="350" x2="108" y2="350"/>
+    </g>
+    <rect x="30" y="128" width="110" height="10" rx="3" fill="#3a3f46"/>
+  </g>
+
+  <!-- 作業者（地上で誘導、保護具着用） -->
+  <g>
+    <rect x="648" y="74" width="34" height="46" rx="8" fill="#f2c230"/>
+    <rect x="648" y="92" width="34" height="5" fill="#e9edf1"/>
+    <rect x="652" y="118" width="12" height="14" rx="4" fill="#2b3a52"/>
+    <rect x="667" y="118" width="12" height="14" rx="4" fill="#2b3a52"/>
+    <circle cx="665" cy="62" r="12" fill="#e0b48f"/>
+    <path d="M650 60 a15 13 0 0 1 30 0 Z" fill="#ffffff" stroke="#c9d1da" stroke-width="2"/>
+    <rect x="648" y="58" width="34" height="4" rx="2" fill="#ffffff" stroke="#c9d1da" stroke-width="1"/>
+    <path d="M648 84 l-22 -18" stroke="#f2c230" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <!-- 吊り下ろし中の管（クレーンのワイヤーを簡略表現） -->
+  <g>
+    <line x1="400" y1="0" x2="400" y2="250" stroke="#3a3f46" stroke-width="3"/>
+    <path d="M400 250 L340 272 M400 250 L460 272" stroke="#3a3f46" stroke-width="3"/>
+    <rect x="320" y="272" width="160" height="34" rx="6" fill="url(#pipeNew)"/>
+  </g>
+</svg>

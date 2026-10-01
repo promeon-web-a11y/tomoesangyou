@@ -64,7 +64,7 @@ a { color: var(--accent); }
 .global-nav a:hover { color: var(--accent); }
 .global-nav .nav-cta a { margin-top: 12px; text-align: center; background: var(--navy); color: var(--white); border-radius: var(--radius); border: 0; font-weight: 700; }
 .global-nav .nav-cta a:hover { background: var(--navy-2); color: var(--white); }
-@media (min-width: 1080px) {
+@media (min-width: 1280px) {
   .nav-toggle { display: none; }
   .global-nav { display: block; position: static; border: 0; box-shadow: none; background: none; }
   .global-nav ul { display: flex; align-items: center; gap: 4px; padding: 0; }
@@ -293,3 +293,64 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px
 .footer-note { margin-top: 12px; font-size: 13px; color: #aab6c8; }
 .footer-top { margin-top: 16px; }
 .footer-top a { color: var(--white); }
+
+/* ===== 第2版の調整（2026-10-01） ===== */
+
+/* セクション余白：通常は上下80px（PC）、確認待ちが中心のセクションは控えめに */
+@media (min-width: 768px) { .section { padding: 80px 0; } }
+.section--compact { padding: 40px 0; }
+@media (min-width: 768px) { .section--compact { padding: 56px 0; } }
+.section--compact .sec-head { margin-bottom: 20px; }
+
+/* 英語ラベルは日本語見出しの補助として控えめに */
+.sec-en { font-weight: 600; letter-spacing: .12em; color: #6b7684; }
+.sec-head--inv .sec-en { color: #a9bad2; }
+
+/* ファーストビュー：募集状況 */
+.hero-lead + .hero-lead { margin-top: 8px; }
+.hero-status { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 2px 16px; padding: 8px 12px; background: var(--tint); border-radius: 4px; font-size: 14px; line-height: 1.7; color: var(--ink-2); }
+.hero-status-note { flex-basis: 100%; font-weight: 700; color: var(--pending-ink); }
+
+/* 写真未掲載の枠（.ph--pending）：比率枠を使わず、説明より小さい帯で示す。
+   実写真に差し替える際は .ph--pending を外し、各比率クラスで表示する。 */
+.ph--pending { aspect-ratio: auto !important; min-height: 88px; padding: 12px; }
+.ph--pending .ph-label { font-size: 14px; padding: 6px 10px; }
+@media (max-width: 767px) { .photo:has(.ph--pending) { order: 2; } }
+
+/* 写真未掲載時のファーストビュー：本文・条件・ボタンを主役にする */
+.hero--no-photo { display: flex; flex-direction: column; }
+.hero--no-photo .hero-body { order: 1; padding-bottom: 24px; }
+.hero--no-photo .hero-media { order: 2; padding: 0 16px 40px; }
+.hero--no-photo .ph--hero { border-width: 1px; border-radius: var(--radius); }
+@media (min-width: 900px) {
+  .hero--no-photo { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+  .hero--no-photo .hero-body { padding-top: 40px; padding-bottom: 48px; }
+  .hero--no-photo .hero-media { align-self: center; padding: 56px max(32px, calc((100vw - 1200px) / 2)) 56px 0; }
+  .hero--no-photo .ph--hero { min-height: 200px; }
+}
+
+/* 仕事内容：求人票の記載（企業固有の業務）を一般用語の説明と区別して示す */
+.work-src { margin-top: 8px; font-size: 14px; color: var(--ink-2); line-height: 1.7; }
+
+/* 1日の流れ：時系列と項目は維持し、間隔を詰める */
+.tl-item { padding-bottom: 16px; }
+
+/* 入社後・職場・代表：確認待ちの箱を控えめに */
+.section--compact .box { padding: 18px 20px; }
+.split--compact { gap: 16px; }
+@media (min-width: 768px) { .split--compact { gap: 32px; } }
+@media (min-width: 768px) { .message:has(.ph--pending) { grid-template-columns: 240px 1fr; gap: 32px; } }
+.message:has(.ph--pending) .message-media { max-width: 240px; }
+.message:has(.ph--pending) .pending-block { padding: 16px 20px; }
+@media (min-width: 1280px) {
+  .hero--no-photo .hero-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
+  .hero--no-photo .hero-facts li { display: flex; flex-direction: column; padding: 12px 16px 12px 0; border-bottom: 0; }
+  .hero--no-photo .hero-facts li + li { padding-left: 16px; border-left: 1px solid var(--line); }
+  .hero--no-photo .fact-label { padding-top: 0; }
+}
+.nw { white-space: nowrap; }
+
+/* イメージイラスト（P-01・P-03・P-04）。実写真に差し替える際は .illust と注記を外す */
+.illust img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); background: #eef3f8; }
+.illust-note { margin-top: 6px; font-size: 13px; line-height: 1.6; color: var(--ink-2); }
+@media (max-width: 899px) { .hero--no-photo .hero-media.illust { max-width: 592px; } }
